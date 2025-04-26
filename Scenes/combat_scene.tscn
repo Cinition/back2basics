@@ -1,3 +1,287 @@
-[gd_scene format=3 uid="uid://c4pjfvxut1s18"]
+[gd_scene load_steps=6 format=3 uid="uid://c4pjfvxut1s18"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://bieqkxt4txp43" path="res://Assets/temp_background.png" id="1_7uj85"]
+[ext_resource type="Texture2D" uid="uid://cpbjrpvwi2uii" path="res://Assets/panel_bg.png" id="1_kv618"]
+[ext_resource type="Texture2D" uid="uid://dep35eky4dcxk" path="res://Assets/panel_detail.png" id="2_qumoa"]
+[ext_resource type="LabelSettings" uid="uid://cl7fmt4s7wh7n" path="res://Assets/label_settings.tres" id="4_2ip8y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vtehv"]
+
+[node name="Origin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7uj85")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 35
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Team" type="HBoxContainer" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -250.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Ally1" type="PanelContainer" parent="MarginContainer/Control/Team"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+
+[node name="Background" type="NinePatchRect" parent="MarginContainer/Control/Team/Ally1"]
+layout_mode = 2
+texture = ExtResource("1_kv618")
+patch_margin_left = 4
+patch_margin_top = 22
+patch_margin_right = 4
+patch_margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/Team/Ally1"]
+layout_mode = 2
+
+[node name="Titel" type="Control" parent="MarginContainer/Control/Team/Ally1/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control/Team/Ally1/VBoxContainer/Titel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Control/Team/Ally1/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/Team/Ally1/VBoxContainer/Titel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_qumoa")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Control/Team/Ally1/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Team/Ally1/VBoxContainer/Titel/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Ally 1"
+label_settings = ExtResource("4_2ip8y")
+
+[node name="Ally2" type="PanelContainer" parent="MarginContainer/Control/Team"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+
+[node name="Background" type="NinePatchRect" parent="MarginContainer/Control/Team/Ally2"]
+layout_mode = 2
+texture = ExtResource("1_kv618")
+patch_margin_left = 4
+patch_margin_top = 22
+patch_margin_right = 4
+patch_margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/Team/Ally2"]
+layout_mode = 2
+
+[node name="Titel" type="Control" parent="MarginContainer/Control/Team/Ally2/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control/Team/Ally2/VBoxContainer/Titel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Control/Team/Ally2/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/Team/Ally2/VBoxContainer/Titel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_qumoa")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Control/Team/Ally2/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Team/Ally2/VBoxContainer/Titel/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Ally 1"
+label_settings = ExtResource("4_2ip8y")
+
+[node name="Ally3" type="PanelContainer" parent="MarginContainer/Control/Team"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+
+[node name="Background" type="NinePatchRect" parent="MarginContainer/Control/Team/Ally3"]
+layout_mode = 2
+texture = ExtResource("1_kv618")
+patch_margin_left = 4
+patch_margin_top = 22
+patch_margin_right = 4
+patch_margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/Team/Ally3"]
+layout_mode = 2
+
+[node name="Titel" type="Control" parent="MarginContainer/Control/Team/Ally3/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control/Team/Ally3/VBoxContainer/Titel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Control/Team/Ally3/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/Team/Ally3/VBoxContainer/Titel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_qumoa")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Control/Team/Ally3/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Team/Ally3/VBoxContainer/Titel/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Ally 1"
+label_settings = ExtResource("4_2ip8y")
+
+[node name="Ally4" type="PanelContainer" parent="MarginContainer/Control/Team"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+
+[node name="Background" type="NinePatchRect" parent="MarginContainer/Control/Team/Ally4"]
+layout_mode = 2
+texture = ExtResource("1_kv618")
+patch_margin_left = 4
+patch_margin_top = 22
+patch_margin_right = 4
+patch_margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/Team/Ally4"]
+layout_mode = 2
+
+[node name="Titel" type="Control" parent="MarginContainer/Control/Team/Ally4/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control/Team/Ally4/VBoxContainer/Titel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Control/Team/Ally4/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/Team/Ally4/VBoxContainer/Titel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_qumoa")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Control/Team/Ally4/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Team/Ally4/VBoxContainer/Titel/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Ally 1"
+label_settings = ExtResource("4_2ip8y")
+
+[node name="EnemyContainer" type="PanelContainer" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -384.0
+offset_right = 384.0
+offset_bottom = 412.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vtehv")
+
+[node name="Background" type="NinePatchRect" parent="MarginContainer/Control/EnemyContainer"]
+layout_mode = 2
+texture = ExtResource("1_kv618")
+patch_margin_left = 4
+patch_margin_top = 22
+patch_margin_right = 4
+patch_margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Control/EnemyContainer"]
+layout_mode = 2
+
+[node name="Titel" type="Control" parent="MarginContainer/Control/EnemyContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Control/EnemyContainer/VBoxContainer/Titel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Control/EnemyContainer/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Control/EnemyContainer/VBoxContainer/Titel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_qumoa")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Control/EnemyContainer/VBoxContainer/Titel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/EnemyContainer/VBoxContainer/Titel/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Enemy"
+label_settings = ExtResource("4_2ip8y")

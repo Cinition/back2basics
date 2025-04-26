@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://csbtii8bklxtm"]
+[gd_scene load_steps=5 format=4 uid="uid://0vdpx5umhjt2"]
 
 [ext_resource type="TileSet" uid="uid://cqjcuj2qknkfu" path="res://Assets/placeholder_tileset.tres" id="1_8er3k"]
-[ext_resource type="Script" uid="uid://b5u0kqa0rcrcx" path="res://Scripts/player.gd" id="2_8er3k"]
+[ext_resource type="Script" uid="uid://b5u0kqa0rcrcx" path="res://Scripts/Player.gd" id="2_8er3k"]
 [ext_resource type="Texture2D" uid="uid://bmwl8t42oft1w" path="res://Assets/MC.png" id="2_u5wyl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2outj"]
-size = Vector2(14, 7)
+size = Vector2(16, 7)
 
 [node name="Origin" type="Node2D"]
 

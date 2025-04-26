@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cl7fmt4s7wh7n"]
+
+[ext_resource type="FontFile" uid="uid://dl8woa6o8qlfm" path="res://Assets/W95FA.otf" id="1_p18n6"]
+
+[resource]
+font = ExtResource("1_p18n6")
+font_size = 13
+font_color = Color(0.752941, 0.752941, 0.752941, 1)
+shadow_size = 0
